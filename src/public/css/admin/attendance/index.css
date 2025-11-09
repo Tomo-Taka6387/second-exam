@@ -1,0 +1,187 @@
+.attendance-index {
+    background-color: #F0EFF2;
+    min-height: 100vh;
+    display: block;
+    padding: 40px 20px;
+    width: 100%;
+    margin: 0;
+}
+
+.attendance-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 36px;
+    margin-right: 10px;
+    background-color: #000000;
+    border-radius: 2px;
+}
+
+.attendance-day {
+    width: 900px !important;
+    max-width: 900px !important;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 0 auto 50px auto;
+}
+
+.yesterday,
+.tomorrow {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.15em;
+    font-family: 'Inter', sans-serif;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.attendance-day a {
+    text-decoration: none !important;
+    color: #737373;
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 15px;
+    filter: invert(40%) sepia(10%) saturate(500%) hue-rotate(180deg) brightness(90%) contrast(90%);
+}
+
+.arrow-icon_next {
+    width: 20px;
+    height: 15px;
+    filter: invert(40%) sepia(10%) saturate(500%) hue-rotate(180deg) brightness(90%) contrast(90%);
+    transform: rotate(180deg);
+
+}
+
+.today .calendar-icon {
+    width: 25px !important;
+    height: 25px !important;
+    flex-shrink: 0;
+}
+
+.today {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    color: #000000;
+}
+
+.attendance-table table {
+    width: 900px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    margin-top: 20px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-bottom: 70px;
+}
+
+.attendance-table th,
+.attendance-table td {
+    height: 45px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 45px;
+    letter-spacing: 0.15em;
+    font-family: 'Inter', sans-serif;
+    color: #737373;
+    padding: 0;
+    text-align: center;
+    border: none;
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.attendance-table th {
+    border-bottom: 3px solid #E1E1E1;
+}
+
+.attendance-table td {
+    border-bottom: 2px solid #E1E1E1;
+}
+
+
+
+.attendance-table th:nth-child(1),
+.attendance-table td:nth-child(1) {
+    width: 120px;
+}
+
+.attendance-table th:nth-child(2),
+.attendance-table td:nth-child(2) {
+    width: 150px;
+}
+
+.attendance-table th:nth-child(3),
+.attendance-table td:nth-child(3) {
+    width: 120px;
+}
+
+.attendance-table th:nth-child(4),
+.attendance-table td:nth-child(4) {
+    width: 200px;
+}
+
+.attendance-table th:nth-child(5),
+.attendance-table td:nth-child(5) {
+    width: 120px;
+}
+
+.attendance-table th:nth-child(6),
+.attendance-table td:nth-child(6) {
+    width: 90px;
+}
+
+.attendance-table tr:last-child td {
+    border-bottom: none;
+}
+
+.table-date_link {
+    color: #000000;
+    text-decoration: none !important;
+}
+
+@media (min-width: 1400px) {
+
+    .attendance-container,
+    .attendance-day,
+    .attendance-table table,
+    h1 {
+        max-width: 900px;
+    }
+}

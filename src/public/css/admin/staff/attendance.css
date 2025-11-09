@@ -1,0 +1,203 @@
+.attendance-index {
+    background-color: #F0EFF2;
+    min-height: 100vh;
+    display: block;
+    padding: 40px 0;
+    width: 100%;
+    margin: 0;
+}
+
+.attendance-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 40px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+h1::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 36px;
+    margin-right: 10px;
+    background-color: #000000;
+    border-radius: 2px;
+}
+
+.attendance-month {
+    width: 900px !important;
+    max-width: 900px !important;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 0 auto 50px auto;
+}
+
+.last-month,
+.next-month {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.15em;
+    font-family: 'Inter', sans-serif;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.attendance-month a {
+    text-decoration: none !important;
+    color: #737373;
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 15px;
+    filter: invert(40%) sepia(10%) saturate(500%) hue-rotate(180deg) brightness(90%) contrast(90%);
+}
+
+.arrow-icon_next {
+    width: 20px;
+    height: 15px;
+    filter: invert(40%) sepia(10%) saturate(500%) hue-rotate(180deg) brightness(90%) contrast(90%);
+    transform: rotate(180deg);
+
+}
+
+.this-month .calendar-icon {
+    width: 25px !important;
+    height: 25px !important;
+    flex-shrink: 0;
+}
+
+.this-month {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    color: #000000;
+}
+
+.attendance-table table {
+    width: 900px !important;
+    height: 1506px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    margin-top: 20px;
+    border-collapse: collapse;
+    margin-bottom: 60px;
+}
+
+.attendance-table th,
+.attendance-table td {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.15em;
+    font-family: 'Inter', sans-serif;
+    color: #737373;
+    padding: 15px 30px;
+    text-align: center;
+    border: none;
+    white-space: nowrap;
+    text-align: center;
+}
+.attendance-table th:last-child,
+.attendance-table td:last-child {
+    padding-right: 88px;
+}
+
+.attendance-table th.table-column_day,
+.attendance-table td.table-data_day {
+    text-align: left;
+    padding-left: 20px;
+
+}
+
+.attendance-table th:first-child,
+.attendance-table td:first-child {
+    padding-left: 60px;
+}
+
+.attendance-table th {
+    border-bottom: 3px solid #E1E1E1;
+}
+
+.attendance-table td {
+    border-bottom: 2px solid #E1E1E1;
+}
+
+.attendance-table tr:last-child td {
+    border-bottom: none;
+}
+
+.table-data_link a {
+    color: #000000;
+    text-decoration: none !important;
+}
+
+.csv-export {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+}
+
+.csv-btn {
+    width: 184px;
+    height: 50px;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0.15em;
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1540px) {
+    .attendance-container {
+        max-width: 900px;
+        padding: 0;
+    }
+
+    .attendance-table table {
+        max-width: 900px;
+    }
+
+    h1 {
+        width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .attendance-month {
+        width: 900px;
+        max-width: 900px;
+    }
+}

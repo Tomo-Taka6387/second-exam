@@ -1,0 +1,172 @@
+.application-index {
+    background-color: #F0EFF2;
+    min-height: 100vh;
+    display: block;
+    padding: 40px 0;
+    width: 100%;
+    margin: 0;
+}
+
+.application-container {
+    max-width: 900px;
+    min-width: 780px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 30px;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    margin: 40px auto 60px auto;
+}
+
+h1::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 36px;
+    margin-right: 10px;
+    background-color: #000000;
+    border-radius: 2px;
+}
+
+.application-toggle {
+    display: flex;
+    gap: 120px;
+    padding-left: 50px;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.tab {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 0.15em;
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.tab.active {
+    font-weight: 700;
+}
+
+.application-table {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    margin-top: 20px;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.application-table th,
+.application-table td {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 12px;
+    border-bottom: 2px solid #E1E1E1;
+    text-align: left;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.application-table th:first-child,
+.application-table td:first-child {
+    padding-left: 50px;
+}
+
+.application-table th:last-child,
+.application-table td:last-child {
+    padding-right: 60px;
+}
+
+
+.application-table th {
+    border-bottom: 3px solid #E1E1E1;
+    color: #737373;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.15em;
+}
+
+.table-date {
+    color: #737373;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.15em;
+}
+
+.table-date_day {
+    color: #737373;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.table-date_link a {
+    text-decoration: none !important;
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.15em;
+}
+
+.application-table th:nth-child(1),
+.application-table td:nth-child(1) {
+    min-width: 120px;
+}
+
+.application-table th:nth-child(2),
+.application-table td:nth-child(2) {
+    min-width: 120px;
+}
+
+.application-table th:nth-child(3),
+.application-table td:nth-child(3) {
+    min-width: 120px;
+}
+
+.application-table th:nth-child(4),
+.application-table td:nth-child(4) {
+    min-width: 150px;
+}
+
+.application-table th:nth-child(5),
+.application-table td:nth-child(5) {
+    min-width: 120px;
+}
+
+.application-table th:nth-child(6),
+.application-table td:nth-child(6) {
+    min-width: 90px;
+}
+
+.no-data {
+    color: #737373;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 1540px) and (min-width: 1400px) {
+
+    .application-container,
+    .application-toggle,
+    .application-table {
+        width: 880px;
+    }
+}

@@ -1,0 +1,117 @@
+.attendance-view {
+    background-color: #F0EFF2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.attendance-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.user_status {
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #C8C8C8;
+    color: #696969;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.15em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.attendance_day {
+    display: block;
+    max-width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 100%;
+    margin-bottom: 40px;
+    color: #000000;
+    white-space: nowrap;
+}
+
+.attendance_time {
+    display: block;
+    max-width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 80px;
+    line-height: 100%;
+    margin-bottom: 70px;
+    color: #000000;
+}
+
+.attendance-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 30px;
+}
+
+.attendance-buttons button {
+    width: 221px;
+    height: 77px;
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    line-height: 100%;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-clock-in,
+.btn-clock-out {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.btn-break-in,
+.btn-break-out {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.out-message {
+    margin-top: 10px;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 26px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.15em;
+    line-height: 100%;
+    margin-left: 40px;
+}
+
+@media (min-width: 1400px) and (max-width: 1540px) {
+    .attendance-buttons {
+        gap: 40px;
+    }
+
+    .attendance-buttons button {
+        width: 200px;
+        height: 70px;
+    }
+}

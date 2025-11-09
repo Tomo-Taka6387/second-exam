@@ -1,0 +1,221 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.request-index {
+    background-color: #F0EFF2;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 40px 0;
+}
+
+.request-container {
+    width: 900px;
+    max-width: 900px;
+    min-width: 780px;
+    margin: 0 auto;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 30px;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    margin: 40px 0;
+}
+
+h1::before {
+    content: "";
+    width: 8px;
+    height: 36px;
+    margin-right: 10px;
+    background-color: #000000;
+    border-radius: 2px;
+}
+
+.details-table {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: #000000;
+    border-collapse: collapse;
+    table-layout: fixed;
+    letter-spacing: 0.15em;
+}
+
+.details-table tr {
+    border-bottom: 2px solid #E1E1E1;
+}
+
+.details-table th,
+.details-table td {
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.details-table th {
+    color: #737373;
+    text-align: left;
+    width: 180px;
+    padding-left: 40px;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.details-table td {
+    color: #000000;
+    text-align: left;
+    padding-left: 160px;
+    vertical-align: middle;
+}
+
+/* 日付行 */
+.date-row {
+    display: flex;
+    gap: 160px;
+    /* 年と日付の間隔 */
+    align-items: center;
+    /* 縦中央 */
+}
+
+/* 日付ブロック */
+.date-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.date-text {
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.15em;
+    color: #000000;
+}
+
+/* 時刻行 */
+.time-row {
+    display: flex;
+    align-items: center;
+}
+
+.time-input-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    /* 時刻と〜の間隔 */
+}
+
+.time-box {
+    width: 103px;
+    height: 28px;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.15em;
+    text-align: center;
+    appearance: none;
+    color: #000000;
+}
+
+.time-box::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.separator {
+    position: relative;
+    transform: none;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+
+.comment-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.comment {
+    width: 100%;
+    max-width: 316px;
+    height: 72px;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 8px 10px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.15em;
+    color: #000000;
+    resize: none;
+}
+
+.request-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.submit-btn {
+    width: 130px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #000;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.15em;
+}
+
+.info-message {
+    width: 130px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: auto;
+    border-radius: 5px;
+    background-color: #696969;
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.15em;
+}
+
+.error-message {
+    color: red;
+    margin-top: 6px;
+    margin-left: 4px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+
+@media (max-width: 1540px) and (min-width: 1400px) {
+    .request-container {
+        max-width: 880px;
+    }
+
+    .details-table th {
+        width: 160px;
+    }
+
+    .time-input-group {
+        width: 280px;
+    }
+}
