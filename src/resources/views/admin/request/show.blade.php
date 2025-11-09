@@ -41,14 +41,14 @@
                                 @if($application->approval_status === 'approved')
                                 <input type="text" class="time-box readonly"
                                     value="{{ $application->new_clock_in ? \Carbon\Carbon::parse($application->new_clock_in)->format('H:i') : '' }}" readonly>
-                                <span class="separator">〜</span>
-                                <input type="text" class="time-box readonly"
+                                <span class="separator readonly">〜</span>
+                                <input type="text" class="time-box_out readonly"
                                     value="{{ $application->new_clock_out ? \Carbon\Carbon::parse($application->new_clock_out)->format('H:i') : '' }}" readonly>
                                 @else
                                 <input type="text" class="time-box" name="new_clock_in"
                                     value="{{ old('new_clock_in', $application->new_clock_in ? \Carbon\Carbon::parse($application->new_clock_in)->format('H:i') : '') }}">
                                 <span class="separator">〜</span>
-                                <input type="text" class="time-box" name="new_clock_out"
+                                <input type="text" class="time-box_out" name="new_clock_out"
                                     value="{{ old('new_clock_out', $application->new_clock_out ? \Carbon\Carbon::parse($application->new_clock_out)->format('H:i') : '') }}">
                                 @endif
                             </div>
@@ -69,14 +69,14 @@
                                 @if($application->approval_status === 'approved')
                                 <input type="text" class="time-box readonly"
                                     value="{{ $application->new_break_in ? \Carbon\Carbon::parse($application->new_break_in)->format('H:i') : '' }}" readonly>
-                                <span class="separator">〜</span>
-                                <input type="text" class="time-box readonly"
+                                <span class="separator readonly">〜</span>
+                                <input type="text" class="time-box_out readonly"
                                     value="{{ $application->new_break_out ? \Carbon\Carbon::parse($application->new_break_out)->format('H:i') : '' }}" readonly>
                                 @else
                                 <input type="text" class="time-box" name="new_break_in"
                                     value="{{ old('new_break_in', $application->new_break_in ? \Carbon\Carbon::parse($application->new_break_in)->format('H:i') : '') }}">
                                 <span class="separator">〜</span>
-                                <input type="text" class="time-box" name="new_break_out"
+                                <input type="text" class="time-box_out" name="new_break_out"
                                     value="{{ old('new_break_out', $application->new_break_out ? \Carbon\Carbon::parse($application->new_break_out)->format('H:i') : '') }}">
                                 @endif
                             </div>
@@ -97,14 +97,14 @@
                                 @if($application->approval_status === 'approved')
                                 <input type="text" class="time-box readonly"
                                     value="{{ $application->new_break2_in ? \Carbon\Carbon::parse($application->new_break2_in)->format('H:i') : '' }}" readonly>
-                                <span class="separator">〜</span>
-                                <input type="text" class="time-box readonly"
+                                <span class="separator readonly">〜</span>
+                                <input type="text" class="time-box_out readonly"
                                     value="{{ $application->new_break2_out ? \Carbon\Carbon::parse($application->new_break2_out)->format('H:i') : '' }}" readonly>
                                 @else
                                 <input type="text" class="time-box" name="new_break2_in"
                                     value="{{ old('new_break2_in', $application->new_break2_in ? \Carbon\Carbon::parse($application->new_break2_in)->format('H:i') : '') }}">
                                 <span class="separator">〜</span>
-                                <input type="text" class="time-box" name="new_break2_out"
+                                <input type="text" class="time-box_out" name="new_break2_out"
                                     value="{{ old('new_break2_out', $application->new_break2_out ? \Carbon\Carbon::parse($application->new_break2_out)->format('H:i') : '') }}">
                                 @endif
                             </div>

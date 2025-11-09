@@ -38,7 +38,6 @@
                     </td>
                 </tr>
 
-
                 <tr>
                     <th>出勤・退勤</th>
                     <td class="time-row @if($application && $application->approval_status === 'approved') approved @endif">
@@ -47,14 +46,14 @@
                                 @if($application && in_array($application->approval_status, ['pending', 'approved']))
                                 <input type="text" class="time-box readonly"
                                     value="{{ \Carbon\Carbon::parse(optional($application)->new_clock_in ?? $attendance->clock_in)->format('H:i') }}" readonly>
-                                <span class="separator">〜</span>
-                                <input type="text" class="time-box readonly right-shift"
+                                <span class="separator readonly">〜</span>
+                                <input type="text" class="time-box_out readonly"
                                     value="{{ \Carbon\Carbon::parse(optional($application)->new_clock_out ?? $attendance->clock_out)->format('H:i') }}" readonly>
                                 @else
                                 <input type="text" class="time-box" name="new_clock_in"
                                     value="{{ old('new_clock_in', \Carbon\Carbon::parse(optional($application)->new_clock_in ?? $attendance->clock_in)->format('H:i')) }}">
                                 <span class="separator">〜</span>
-                                <input type="text" class="time-box" name="new_clock_out"
+                                <input type="text" class="time-box_out" name="new_clock_out"
                                     value="{{ old('new_clock_out', \Carbon\Carbon::parse(optional($application)->new_clock_out ?? $attendance->clock_out)->format('H:i')) }}">
                                 @endif
                             </div>
@@ -72,8 +71,8 @@
                                     value="{{ optional($application)->new_break_in
                                                 ? \Carbon\Carbon::parse($application->new_break_in)->format('H:i')
                                                 : ($attendance->break_in ? \Carbon\Carbon::parse($attendance->break_in)->format('H:i') : '') }}" readonly>
-                                <span class="separator">〜</span>
-                                <input type="text" class="time-box readonly right-shift"
+                                <span class="separator  readonly">〜</span>
+                                <input type="text" class="time-box_out readonly"
                                     value="{{ optional($application)->new_break_out
                                                 ? \Carbon\Carbon::parse($application->new_break_out)->format('H:i')
                                                 : ($attendance->break_out ? \Carbon\Carbon::parse($attendance->break_out)->format('H:i') : '') }}" readonly>
@@ -85,7 +84,7 @@
                                                     : ($attendance->break_in ? \Carbon\Carbon::parse($attendance->break_in)->format('H:i') : '')
                                             ) }}">
                                 <span class="separator">〜</span>
-                                <input type="text" class="time-box" name="new_break_out"
+                                <input type="text" class="time-box_out" name="new_break_out"
                                     value="{{ old('new_break_out',
                                                 optional($application)->new_break_out
                                                     ? \Carbon\Carbon::parse($application->new_break_out)->format('H:i')
@@ -97,6 +96,7 @@
                     </td>
                 </tr>
 
+
                 <tr>
                     <th>休憩２</th>
                     <td class="time-row @if($application && $application->approval_status === 'approved') approved @endif">
@@ -107,8 +107,8 @@
                                     value="{{ optional($application)->new_break2_in
                                                 ? \Carbon\Carbon::parse($application->new_break2_in)->format('H:i')
                                                 : ($attendance->break2_in ? \Carbon\Carbon::parse($attendance->break2_in)->format('H:i') : '') }}" readonly>
-                                <span class="separator">〜</span>
-                                <input type="text" class="time-box readonly right-shift"
+                                <span class="separator  readonly">〜</span>
+                                <input type="text" class="time-box_out readonly"
                                     value="{{ optional($application)->new_break2_out
                                                 ? \Carbon\Carbon::parse($application->new_break2_out)->format('H:i')
                                                 : ($attendance->break2_out ? \Carbon\Carbon::parse($attendance->break2_out)->format('H:i') : '') }}" readonly>
@@ -120,7 +120,7 @@
                                                     : ($attendance->break2_in ? \Carbon\Carbon::parse($attendance->break2_in)->format('H:i') : '')
                                             ) }}">
                                 <span class="separator">〜</span>
-                                <input type="text" class="time-box" name="new_break2_out"
+                                <input type="text" class="time-box_out" name="new_break2_out"
                                     value="{{ old('new_break2_out',
                                                 optional($application)->new_break2_out
                                                     ? \Carbon\Carbon::parse($application->new_break2_out)->format('H:i')

@@ -78,16 +78,14 @@ h1::before {
     vertical-align: middle;
 }
 
-/* 日付行 */
+
 .date-row {
     display: flex;
     gap: 160px;
-    /* 年と日付の間隔 */
     align-items: center;
-    /* 縦中央 */
 }
 
-/* 日付ブロック */
+
 .date-block {
     display: flex;
     flex-direction: column;
@@ -103,7 +101,7 @@ h1::before {
     color: #000000;
 }
 
-/* 時刻行 */
+
 .time-row {
     display: flex;
     align-items: center;
@@ -114,7 +112,6 @@ h1::before {
     align-items: center;
     justify-content: flex-start;
     gap: 50px;
-    /* 時刻と〜の間隔 */
 }
 
 .time-box {
@@ -127,20 +124,52 @@ h1::before {
     text-align: center;
     appearance: none;
     color: #000000;
+    padding-right: 35px;
+}
+.time-box_out {
+    width: 103px;
+    height: 28px;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.15em;
+    text-align: center;
+    appearance: none;
+    color: #000000;
+    margin-left: 60px;
+}
+.time-box.readonly {
+    border: none;
+    background-color: transparent;
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.15em;
+    pointer-events: none;
+    padding-right: 40px;
 }
 
-.time-box::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
+.time-box_out.readonly {
+    border: none;
+    background-color: transparent;
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.15em;
+    pointer-events: none;
+    margin-left: 60px;
 }
 
 .separator {
-    position: relative;
-    transform: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-weight: 700;
-    flex-shrink: 0;
+    text-align: center;
+    padding-left: 50px;
 }
-
 
 .comment-row {
     display: flex;

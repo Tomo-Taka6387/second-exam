@@ -75,7 +75,6 @@ h1::before {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
-    gap: px;
 }
 
 .date-row {
@@ -85,7 +84,6 @@ h1::before {
     gap: 20px;
     width: 316px;
     position: relative;
-    margin-left: 1;
 }
 
 .date-block {
@@ -114,11 +112,22 @@ h1::before {
     padding-left: 4px;
     width: 80px;
     box-sizing: border-box;
-    gap: 40px;
 }
 
+.details-table td.time-row.approved .time-box.readonly {
+    padding-left: 5px;
+    padding-right: 0;
+}
+
+/* 右寄せ調整 */
 .details-table td.time-row.approved .time-box.readonly.right-shift {
-    transform: translateX(50px);
+    transform: translateX(20px);
+    /* 必要に応じて px 調整 */
+}
+
+.details-table td.time-row.approved .time-box.readonly:last-child {
+    padding-left: 0;
+    padding-right: 20px;
 }
 
 .date-text.readonly {
@@ -137,7 +146,6 @@ h1::before {
     text-align: left;
     position: relative;
 }
-
 
 .info-box {
     width: 316px;
@@ -178,6 +186,21 @@ h1::before {
     appearance: none;
 }
 
+.time-box_out {
+    width: 103px;
+    height: 28px;
+    border-radius: 4px;
+    border: 1px solid #E1E1E1;
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.15em;
+    text-align: center;
+    appearance: none;
+    margin-left: 90px;
+}
+
 .time-box.readonly {
     border: none;
     background-color: transparent;
@@ -187,7 +210,19 @@ h1::before {
     font-family: 'Inter', sans-serif;
     letter-spacing: 0.15em;
     pointer-events: none;
-    padding-right: 40px;
+    padding-right: 35px !important;
+}
+
+.time-box_out.readonly {
+    border: none;
+    background-color: transparent;
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.15em;
+    pointer-events: none;
+    margin-left: 80px;
 }
 
 .time-box::-webkit-calendar-picker-indicator {
@@ -196,6 +231,15 @@ h1::before {
 }
 
 .separator {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 700;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.separator.readonly {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -218,23 +262,11 @@ h1::before {
     text-align: center;
 }
 
-.details-table td.time-row.approved .time-box.readonly {
-    padding-left: 5px;
-    padding-right: 0;
-}
-
-
-.details-table td.time-row.approved .time-box.readonly:last-child {
-    padding-left: 0;
-
-    padding-right: 20px;
-}
-
 .comment.readonly-text.approved-comment {
     padding-left: 5px;
 }
+
 .comment {
-    width: calc(100% - 40px);
     width: 316px;
     height: 72px;
     border-radius: 4px;
@@ -306,6 +338,7 @@ h1::before {
     .attendance-container {
         max-width: 880px;
     }
+
     .details-table th {
         width: 160px;
     }

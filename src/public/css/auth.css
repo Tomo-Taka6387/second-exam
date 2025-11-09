@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
+    background-color: #000000;
     box-sizing: border-box;
     flex-wrap: wrap;
 }
@@ -50,17 +50,17 @@
 
 @media screen and (max-width: 1540px) and (min-width: 1400px) {
     .header {
-        padding: 0 30px;
+        padding: 10px 30px;
     }
 
     .header_menu {
         gap: 30px;
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .logout-btn {
-        font-size: 22px;
         padding: 0;
         line-height: 32px;
+        font-size: 24px;
     }
 }

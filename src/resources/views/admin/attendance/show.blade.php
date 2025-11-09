@@ -78,7 +78,6 @@
                     </td>
                 </tr>
 
-                {{-- 休憩2 --}}
                 <tr>
                     <th>休憩2</th>
                     <td class="time-row">
